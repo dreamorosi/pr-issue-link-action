@@ -1,0 +1,64 @@
+{
+  "name": "pr-issue-link-action",
+  "version": "0.0.1",
+  "description": "An opinionated GitHub Action that checks for issues mentioned in a PR and optionally links them.",
+  "scripts": {
+    "init-environment": "husky install",
+    "build": "tsup",
+    "lint": "eslint --ext .ts --no-error-on-unmatched-pattern src tests",
+    "lint-fix": "eslint --fix --ext .ts --no-error-on-unmatched-pattern src tests",
+    "test": "vitest --run --coverage"
+  },
+  "type": "module",
+  "keywords": [
+    "github",
+    "action",
+    "link-pr",
+    "link-issue",
+    "issues",
+    "pr",
+    "watch"
+  ],
+  "author": {
+    "name": "Andrea Amorosi",
+    "email": "dreamorosi@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreamorosi/pr-issue-link-action.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dreamorosi/pr-issue-link-action/issues"
+  },
+  "homepage": "https://github.com/dreamorosi/pr-issue-link-action#readme",
+  "license": "MIT-0",
+  "engines": {
+    "node": ">=18"
+  },
+  "lint-staged": {
+    "*.ts": "npm run lint-fix"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitest/coverage-c8": "^0.30.1",
+    "esbuild": "^0.17.16",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-node": "^0.3.7",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.7",
+    "tsup": "^6.7.0",
+    "typescript": "~4.9.5",
+    "vitest": "^0.30.1"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}
